@@ -12,4 +12,4 @@ Range
 Standard deviation sample
 Variance sample
 Standard deviation with population 
-Variance population
+Variance population.
