@@ -1,7 +1,8 @@
 # statsistic-calculator
 
-This project is based on statistics class important functions in scientific calculator. 
-Things to calculate 1:    
+This project is based on statistics class important functions in scientific calculator.   
+
+Things to calculate:    
 
   
 Binomial pdf/cdf
