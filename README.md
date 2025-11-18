@@ -1,7 +1,7 @@
 # statsistic-calculator
 
 This project is based on statistics class important functions in scientific calculator. 
-Things to calculate:
+Things to calculate 1:
 Binomial pdf/cdf
 Poisson 
 List
