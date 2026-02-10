@@ -1,0 +1,21 @@
+/* TOP NAVIGATION BAR */
+.nav-header {
+    background-color: #f7b33f;   /* dark red */
+    height: 70px;
+    display: flex;
+    justify-content: center;     /* CENTER horizontally */
+    align-items: center;         /* CENTER vertically */
+    gap: 40px;                   /* space between links */
+}
+
+/* NAV LINKS */
+.nav-header a {
+    color: white;
+    font-size: 22px;             /* BIGGER font */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-header a:hover {
+    text-decoration: underline;
+}
