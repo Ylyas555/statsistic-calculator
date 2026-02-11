@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice</title>
+</head>
+<body>
+
+<h1>Practice Statistics</h1>
+
+<form method="post">
+
+{% for topic, nums in questions.items() %}
+
+<h3>{{ topic }}</h3>
+<p>
+Find the {{ topic }} of:
+{{ nums | join(", ") }}
+</p>
+
+<input type="text" name="{{ topic }}">
+
+{% if results.get(topic) %}
+
+    {% if results[topic] == "empty" %}
+        <span style="color:orange;">⚠ Enter an answer</span>
+
+    {% elif results[topic] == "invalid" %}
+        <span style="color:red;">✖ Only numbers allowed</span>
+
+    {% elif results[topic].correct %}
+        <span style="color:green;">
+            ✔ Correct, your answer is {{ results[topic].user }}
+        </span>
+
+    {% else %}
+        <span style="color:red;">
+            ✖ Incorrect, correct answer is {{ results[topic].answer }}
+        </span>
+
+    {% endif %}
+
+{% endif %}
+
+<br><br>
+
+{% endfor %}
+
+<button type="submit">Check Answers</button>
+
+</form>
+
+</body>
+</html>

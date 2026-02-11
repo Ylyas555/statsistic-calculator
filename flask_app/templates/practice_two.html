@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice Two</title>
+</head>
+<body>
+
+<h1>Practice Two</h1>
+
+<p>
+Find the Sample Standard Deviation of:
+{{ data.nums | join(", ") }}
+</p>
+
+<form method="post">
+
+<input type="text" name="answer">
+
+{% if results %}
+
+    {% if results == "empty" %}
+        <span style="color:orange;">⚠ Enter an answer</span>
+
+    {% elif results == "invalid" %}
+        <span style="color:red;">✖ Only numbers allowed</span>
+
+    {% elif results.correct %}
+        <span style="color:green;">
+            ✔ Correct, your answer is {{ results.user }}
+        </span>
+
+    {% else %}
+        <span style="color:red;">
+            ✖ Incorrect, correct answer is {{ results.answer }}
+        </span>
+
+    {% endif %}
+
+{% endif %}
+
+<br><br>
+<button type="submit">Check</button>
+
+</form>
+
+</body>
+</html>
